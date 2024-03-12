@@ -34,6 +34,9 @@ spec:
         - name: whatap_micro_enabled
           value: "true"
         resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
           limits:
             cpu: 100m
             memory: 100Mi
