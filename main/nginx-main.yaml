@@ -21,7 +21,7 @@ spec:
         resources:
           limits:
             cpu: 100m
-            memory: 20Mi
+            memory: 100Mi
         volumeMounts:
           - name: main-storage
             mountPath: /usr/share/nginx/html
