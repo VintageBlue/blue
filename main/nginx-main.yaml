@@ -20,7 +20,7 @@ spec:
         - containerPort: 80
         resources:
           limits:
-            cpu: 100m
+            cpu: 50m
             memory: 150Mi
         volumeMounts:
           - name: main-storage
