@@ -12,6 +12,7 @@ spec:
     metadata:
       labels:
         app: main-was
+        version: v1
     spec:
       containers:
       - image: 992382600671.dkr.ecr.ap-northeast-2.amazonaws.com/main-was:v1.2
