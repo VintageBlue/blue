@@ -14,7 +14,7 @@ spec:
         app: item-was
     spec:
       containers:
-      - image: 992382600671.dkr.ecr.ap-northeast-2.amazonaws.com/item-was:v1.2
+      - image: 992382600671.dkr.ecr.ap-northeast-2.amazonaws.com/item-was:v1.3
         name: item-was
         ports:
         - containerPort: 8080
@@ -28,13 +28,16 @@ spec:
         - name: OKIND
           value: item-was
         - name: license
-          value: x604guk811s9o-z5dpkhsvjkrd34-x5pse8eqqhmooo
+          value: x604h6k85hfkr-z5n6vc0i6tdoih-z2r2bgefe66mce
         - name: whatap_server_host
           value: 13.124.11.223/13.209.172.35
         - name: whatap_micro_enabled
           value: "true"
         resources:
           requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
             cpu: 100m
             memory: 100Mi
       nodeSelector:
