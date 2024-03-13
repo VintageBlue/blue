@@ -20,10 +20,10 @@ spec:
         - containerPort: 80
         resources:
           requests:
-            cpu: 100m
+            cpu: 50m
             memory: 100Mi
           limits:
-            cpu: 100m
+            cpu: 50m
             memory: 100Mi
         volumeMounts:
         - name: item-storage
@@ -46,6 +46,5 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 80
-    nodePort: 30120
   selector:
     app: item-web
