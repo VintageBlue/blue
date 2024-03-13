@@ -36,7 +36,10 @@ spec:
         resources:
           requests:
             cpu: 50m
-            memory: 100Mi 
+            memory: 100Mi
+          limits:
+            cpu: 150m
+            memory: 200Mi
       nodeSelector:
         web: item
 ---
