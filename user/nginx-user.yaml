@@ -41,11 +41,10 @@ metadata:
   name: user-svc
   namespace: frontend
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
   - protocol: TCP
     port: 80
     targetPort: 80
-    nodePort: 30130
   selector:
     app: user-web
