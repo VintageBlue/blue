@@ -15,7 +15,7 @@ spec:
         version: v1
     spec:
       containers:
-      - image: 992382600671.dkr.ecr.ap-northeast-2.amazonaws.com/main-was:v1.4
+      - image: 992382600671.dkr.ecr.ap-northeast-2.amazonaws.com/main-was:v2.0
         name: main-was
         ports:
         - containerPort: 8080
@@ -39,8 +39,8 @@ spec:
             cpu: 50m
             memory: 100Mi
           limits:
-            cpu: 150m
-            memory: 200Mi
+            cpu: 50m
+            memory: 100Mi
       nodeSelector:
         web: main
 ---
