@@ -20,10 +20,10 @@ spec:
         - containerPort: 80
         resources:
           requests:
-            cpu: 100m
+            cpu: 50m
             memory: 100Mi
           limits:
-            cpu: 100m
+            cpu: 50m
             memory: 100Mi
         volumeMounts:
           - name: main-storage
@@ -41,11 +41,10 @@ metadata:
   name: main-svc
   namespace: frontend
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
   - protocol: TCP
     port: 80
     targetPort: 80
-    nodePort: 30110
   selector:
     app: main-web
