@@ -49,6 +49,9 @@ kind: Service
 metadata:
   name: main-svc
   namespace: backend
+  labels:
+    app: main-was
+    service: main-was
 spec:
   ports:
   - port: 8080
