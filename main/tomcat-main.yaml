@@ -8,6 +8,7 @@ spec:
   selector:
     matchLabels:
       app: main-was
+      version: v1
   template:
     metadata:
       labels:
