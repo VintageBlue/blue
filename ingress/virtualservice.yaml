@@ -1,0 +1,32 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: virtualservice
+  namespace: frontend
+spec:
+  hosts:
+  - "*" # ALB의 DNS 이름을 여기에 입력
+  gateways:
+  - istio-system/istio-alb-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /user/
+    route:
+    - destination:
+        host: user-svc.frontend.svc.cluster.local
+        port:
+          number: 80
+  - match:
+    - uri:
+        prefix: /item/
+    route:
+    - destination:
+        host: item-svc.frontend.svc.cluster.local
+        port:
+          number: 80
+  - route:
+    - destination:
+        host: main-svc.frontend.svc.cluster.local
+        port:
+          number: 80
